@@ -11,14 +11,14 @@ build:
 clean:
 	go clean
 	rm -f ./bin/*
-	rm .test-coverage
+	rm *.out
 test:
 	go test
 check:
 	go test
 cover:
-	go test -coverprofile .test-coverage $(GO_FILES)
-	go tool cover -html=.test-coverage
+	go test -coverprofile test-coverage.out $(GO_FILES)
+	go tool cover -html=test-coverage.out
 # run:
 # 	./"${BIN_FILE}"
 lint:
