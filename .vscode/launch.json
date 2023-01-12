@@ -11,7 +11,8 @@
             "mode": "debug",
             "program": "${workspaceFolder}/cmd/blinker/blinker.go",
             "args": [
-                "21"
+                "21",   // GPIO Pin for LED
+                "10"    // Blink Interval in Seconds
             ]
         },
         {
@@ -21,8 +22,8 @@
             "mode": "debug",
             "program": "${workspaceFolder}/cmd/button/button.go",
             "args": [
-                "26",
-                "21"
+                "26",   // GPIO Pin for Button
+                "21"    // GPIO Pin for LED
             ]
         },
         {
@@ -32,11 +33,10 @@
             "mode": "debug",
             "program": "${workspaceFolder}/cmd/monitor/monitor.go",
             "args": [
-                "26",
-                "21",
-                "4"
-            ],
-            "asRoot": true
+                "26",   // GPIO Pin for Button
+                "21",   // GPIO Pin for LED
+                "4"    // GPIO Pin for Temperature Sensor
+            ]
         }
     ]
 }

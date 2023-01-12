@@ -8,15 +8,16 @@ import (
 	"github.com/aegixx/rpi/internal/app/blinker"
 )
 
-const (
-	rate = 10
-)
-
 func main() {
 
 	args := os.Args[1:]
 
 	pin, err := strconv.Atoi(args[0])
+	if err != nil {
+		panic(err)
+	}
+
+	rate, err := strconv.Atoi(args[1])
 	if err != nil {
 		panic(err)
 	}
